@@ -1,0 +1,12 @@
+{
+    "employee": [
+      {
+
+        "adminname": "sumedha",
+        "adminEmail": "sumedhakomade@gmail.com",
+        "adminPassword":123,
+        "adminPhone":87
+        
+      }
+    ]
+  }

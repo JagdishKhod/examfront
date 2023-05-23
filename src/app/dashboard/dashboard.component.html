@@ -1,0 +1,71 @@
+<p>dashboard works!</p>
+<div class="row">
+
+    <div class="col-sm-8">
+        <button type="button" class="btn btn-primary mb-2" routerLink="add">
+            <i class="fa fa-address-card-o" aria-hidden="true"> Add</i></button>
+    </div>
+    <div class="col-sm-4">
+        <i class="fa fa-search" aria-hidden="true"></i>&nbsp;
+        <!-- ng2-search-filter- pipe -->
+          <!-- <input type="text" [(ngModel)]="term"> -->
+    </div>
+</div>
+
+
+<table  class="table table-hover table-striped table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Id</th><th>adminname</th><th>adminEmail</th><th>adminPassword</th><th>adminPhone</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+        <tr *ngFor="let e of emp ">
+            <td>{{e.Id}}</td>
+            <td>{{e.adminname}}</td>
+            <td>{{e.adminEmail}}</td>
+            <td>{{e.adminPassword}}</td>
+            <td>{{e.adminPhone}}</td>
+            <td>
+                <button type="button" class="btn btn-primary  btn-sm" >
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button> |
+                <button type="button" class="btn btn-success btn-sm" [routerLink]= "['/CRUD/edit',e.id]">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> |
+                <button type="button" class="btn btn-danger btn-sm" (click)="getId(e.id)">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </td>
+
+            <ng-template #template>
+                <div class="modal-header">
+                  <h4 class="modal-title pull-left">Modal</h4>
+                  <button type="button" class="btn-close close pull-right" aria-label="Close">
+                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <!-- table to display information -->
+                  <table>
+                    <tr>
+                        <td>Id</td><td>{{e.Id}}</td>
+                    </tr>
+                    <tr>
+                        <td>Admin Name</td><td>{{e.adminname}}</td>
+                    </tr>
+                    <tr>
+                        <td>Admin Email</td><td>{{e.adminEmail}}</td>
+                    </tr>
+                    <tr>
+                        <td>Admin Password</td><td>{{e.adminPassword}}</td>
+                    </tr>
+                    <tr>
+                        <td>admin Phone</td><td>{{e.adminPhone}}</td>
+                    </tr>
+                  </table>
+                </div>
+              </ng-template>
+        </tr>
+    </tbody>
+</table>

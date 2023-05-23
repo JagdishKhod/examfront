@@ -1,0 +1,89 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+        <div class="row" style="margin-top:20px">
+            <div class="col-md-6 offset-md-3">
+
+                <div class="container text-center">
+                    <img src="../../../assets/signup.jpg" alt="" margin-radius="10px">
+                </div>
+                <h1 class="text-center">Sign Up</h1>
+
+                <!-- {{admin | json }} -->
+
+                <form (ngSubmit)="formSubmit()">
+              
+                    <!-- for Admin name field  -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Admin Name</mat-label>
+                        <input required
+                        [(ngModel)]="admin.adminname"
+                        name="adminname"
+                        matInput placeholder="Enter here">
+                        <mat-hint>Admin name must be unique</mat-hint>
+                      </mat-form-field>
+
+                            <!-- for email -->
+                            <mat-form-field class="full-width" appearance="outline">
+                              <mat-label>Email Address</mat-label>
+                              <input required
+                              [(ngModel)]="admin.adminEmail"
+                              name="adminEmail"
+                              matInput placeholder="Enter here" type="email">
+                            </mat-form-field>
+                            
+                            <select class="form-select p-3 mb-3" style="border-color: #899096;" aria-label="Default select example" name="adminType" [(ngModel)]="admin.adminType">
+                              <option selected value="1">Admin</option>
+                              <option value="2">Student</option>
+                            </select>
+                            
+                              <!-- <md-select ng-model="actionModel">
+                                  <md-option><em>None</em></md-option>
+                                  <md-option ng-value="1">Admin</md-option>
+                                  <md-option ng-value="2">Student<md-option>            
+                              </md-select> -->
+                    
+                            
+                            <!-- for password -->
+                            <mat-form-field class="full-width" appearance="outline">
+                              <mat-label>Password</mat-label >
+                              <input required
+                             [(ngModel)]="admin.adminPassword"
+                             name="adminPassword"
+                              matInput placeholder="Enter here" type="password">
+                            </mat-form-field>
+                            
+                            <!-- for phone number -->
+                          <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Phone number</mat-label>
+                            <input 
+                            [(ngModel)]="admin.adminPhone"
+                            name="adminPhone"
+                            matInput placeholder="Enter here" type="number" maxlength="10" minlength="10">
+                          </mat-form-field>
+    
+                          <div class="container" style="text-align: center;">
+                            <button type="submit" mat-raised-button color="accent" >Register</button>
+                            <button type="reset" mat-raised-button color="primary" style="margin: 20px;">clear</button>
+                          </div>
+
+                      
+                      <!-- for first Name
+                        <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>First Name</mat-label>
+                          <input matInput placeholder="Enter here">
+                        </mat-form-field> -->
+                        
+                        <!-- for last name -->
+                        <!-- <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>Last Name</mat-label>
+                          <input matInput placeholder="Enter here">
+                        </mat-form-field> -->
+                        
+                  
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

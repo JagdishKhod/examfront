@@ -1,0 +1,24 @@
+<div class="bootstrap-wrapper">
+   <div class="container w-25 " >
+      <form style="display: flex; justify-content: center;     display: flex;
+   justify-content: center;
+   flex-direction: column;" class="mt-5" (ngSubmit)="formSubmit()">
+     <h1 class="container text-center"><b>Login</b></h1>
+         <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Type here" required [(ngModel)]="user.email" name="email">
+         </mat-form-field>
+
+         <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" type="password" required="" [(ngModel)]="user.password"
+               name="password">
+         </mat-form-field>
+         <div class="d-grid gap-2">
+            <button class="btn btn-primary btn-sm btn-outline" type="submit">Log In</button>
+
+         </div>
+      </form>
+   </div>
+
+</div>

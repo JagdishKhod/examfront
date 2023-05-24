@@ -27,13 +27,13 @@ public admin = {
     
     formSubmit ()
     {
-      debugger;
+      // debugger;
       console.log(this.admin);
       if(this.admin.adminname=='' || this.admin.adminname==null)
       {
         // alert('Admin is Required !');
         this._snack.open("Admin Name is required !",'ok',{
-          duration:2000,
+          duration:1000,
           // verticalPosition:'top',
           // horizontalPosition:'center'
         });

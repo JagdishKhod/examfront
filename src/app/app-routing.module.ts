@@ -8,6 +8,11 @@ import{DashboardComponent} from './dashboard/dashboard.component';
 const routes: Routes = [
 
   {
+    path:'',
+    component:HomeComponent,
+    pathMatch:'full'
+  },
+  {
     path:'signup',
     component:SignupComponent,
     pathMatch:'full',
@@ -16,11 +21,6 @@ const routes: Routes = [
     path:'login',
     component:LoginComponent,
     pathMatch:'full',
-  },
-  {
-    path:'Home',
-    component:HomeComponent,
-    pathMatch:'full'
   },
   {
     path:'dashboard',

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  Router } from "@angular/router";
 import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent {
     password: null,
   }
 
-  constructor(private adminService: AdminService){
+  constructor(private adminService: AdminService, private router: Router){
 
   }
 
@@ -33,7 +34,10 @@ export class LoginComponent {
 // Step 4: Output the result
     console.log(`Email "${this.user.email}" exists in the array: ${emailExists}`);
     if(emailExists && passwordExists){
+      localStorage.setItem('isLoggedIn', "true");
+      this.router.navigate(['/notes']);
       alert("Login successful");
+      window.location.reload();
     }else{
       alert("Login failed");
     }

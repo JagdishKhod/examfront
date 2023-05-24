@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import {HomeComponent} from './home/home.component';
 import{DashboardComponent} from './dashboard/dashboard.component';
 import { ContextComponent } from './tutorials/context/context.component';
+import { PageOneComponent } from "./tutorials/page-one/page-one.component";
 
 const routes: Routes = [
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   },
   {
     path:'notes',
-    component:ContextComponent,
+    component:PageOneComponent,
     pathMatch:'full'
   }
 ];

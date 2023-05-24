@@ -20,7 +20,8 @@ export class AdminService {
   }
 
   public logIn(user:any){
-    return this.http.post(`${baseUrl}/admin/login`, user)
+    return this.http.post(`${baseUrl}/admin/login`, user);
+
   }
 
 

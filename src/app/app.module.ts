@@ -16,6 +16,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AboutComponent } from './about/about.component';
+import { PageOneComponent } from './tutorials/page-one/page-one.component';
+import { PageTwoComponent } from './tutorials/page-two/page-two.component';
+import { PageThreeComponent } from './tutorials/page-three/page-three.component';
+import { PageFourComponent } from './tutorials/page-four/page-four.component';
+import { PageFiveComponent } from './tutorials/page-five/page-five.component';
+import { PageSixComponent } from './tutorials/page-six/page-six.component';
+import { ContextComponent } from './tutorials/context/context.component';
+//import { EnvironmentComponent } from './environment/environment.component';
 
 
 @NgModule({
@@ -27,6 +36,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
+    AboutComponent,
+    PageOneComponent,
+    PageTwoComponent,
+    PageThreeComponent,
+    PageFourComponent,
+    PageFiveComponent,
+    PageSixComponent,
+    ContextComponent,
+  //  EnvironmentComponent,
    
 
   ],

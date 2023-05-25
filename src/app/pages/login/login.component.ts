@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {  Router } from "@angular/router";
 import { AdminService } from 'src/app/services/admin.service';
+import Swal from "sweetalert2";
 
 @Component({
   selector: 'app-login',
@@ -36,10 +37,10 @@ export class LoginComponent {
     if(emailExists && passwordExists){
       localStorage.setItem('isLoggedIn', "true");
       this.router.navigate(['/notes']);
-      alert("Login successful");
+      Swal.fire("Successfully", "Log In", "success");
       window.location.reload();
     }else{
-      alert("Login failed");
+      Swal.fire("Failed", "Log In", "error");
     }
 
     // this.adminService.logIn(this.user).subscribe(res => {

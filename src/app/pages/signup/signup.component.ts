@@ -42,7 +42,9 @@ export class SignupComponent implements OnInit {
 
 // Step 4: Store the updated array back into localStorage
 		localStorage.setItem('userList', JSON.stringify(existingArray));
-
+		if(this.admin.adminEmail && this.admin.adminPassword && this.admin.adminname){
+		Swal.fire("Successfully", "Admin name is Registered", "success");
+		}
 
 
 

@@ -48,38 +48,32 @@ export class SignupComponent implements OnInit {
 
 
 
-		// const userList = [];
-	  // userList.push(this.admin);
-		// const existingArray = localStorage.getItem('myArray') || [];
-		// existingArray.push(this.admin);
-		// localStorage.setItem('userList', JSON.stringify(userList));
-
-		// // debugger;
-		// console.log(this.admin);
-		// if (this.admin.adminname == "" || this.admin.adminname == null) {
-		// 	// alert('Admin is Required !');
-		// 	this._snack.open("Admin Name is required !", "ok", {
-		// 		duration: 1000,
-		// 		// verticalPosition:'top',
-		// 		// horizontalPosition:'center'
-		// 	});
-		// 	return;
-		// }
-		// //addAdmin :adminService
-		// this.adminService.addAdmin(this.admin).subscribe(
-		// 	(data: any) => {
-		// 		//succcess
-		// 		console.log(data);
-		// 		// alert('Successfull...');
-		// 		Swal.fire("Successfully", "Admin name is Registered", "success");
-		// 	},
-		// 	(error) => {
-		// 		//error
-		// 		console.log(error);
-		// 		//  alert('Something is Wrong');
-		// 		Swal.fire("Error", "Something Went wrong", "warning");
-		// 	}
-		// );
+		
+		console.log(this.admin);
+		if (this.admin.adminname == "" || this.admin.adminname == null) {
+			// alert('Admin is Required !');
+			this._snack.open("Admin Name is required !", "ok", {
+				duration: 1000,
+				// verticalPosition:'top',
+				// horizontalPosition:'center'
+			});
+			return;
+		}
+		//addAdmin :adminService
+		this.adminService.addAdmin(this.admin).subscribe(
+			(data: any) => {
+				//succcess
+				console.log(data);
+				// alert('Successfull...');
+				Swal.fire("Successfully", "Admin name is Registered", "success");
+			},
+			(error) => {
+				//error
+				console.log(error);
+				//  alert('Something is Wrong');
+				Swal.fire("Error", "Something Went wrong", "warning");
+			}
+		);
 	}
 
 }

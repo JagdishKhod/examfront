@@ -1,9 +1,9 @@
 <!-- <p>navbar works!</p> -->
 <div class="way d-flex gap-2 p-2 bg-light">
-<!--  <a class="btn btn-primary btn-sm" routerLink="/dashboard">Dashboard</a>-->
   <a class="btn btn-primary btn-sm" routerLink="/home" (click)="isHome = true">Home</a>
   <a class="btn btn-primary btn-sm" routerLink="/signup" *ngIf="!isLogInUser">SignUp</a>
   <a class="btn btn-primary btn-sm" routerLink="/login" *ngIf="!isLogInUser">Login</a>
+  <a class="btn btn-primary btn-sm" routerLink="/dashboard">Dashboard</a>
   <a class="btn btn-primary btn-sm" routerLink="/notes" *ngIf="isLogInUser" (click)="isHome = false">Notes</a>
   <a class="btn btn-primary btn-sm float-end" (click)="logOut()" *ngIf="isLogInUser">Log Out</a>
 </div>
